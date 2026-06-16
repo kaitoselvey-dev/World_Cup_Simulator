@@ -1,0 +1,25 @@
+# Pythonのキャッシュ
+__pycache__/
+*.pyc
+*.pyo
+
+# 仮想環境
+.venv/
+venv/
+env/
+
+# VSCode設定
+.vscode/
+
+# 環境変数・秘密情報
+.env
+
+# OSが自動生成するファイル
+.DS_Store
+Thumbs.db
+
+# ログファイル
+*.log
+
+unnecessary/
+test.py
