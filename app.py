@@ -265,6 +265,15 @@ class Application(Frame):
         columns = [col[1] for col in self.cur_user.fetchall()]
         columns[0] = f"n = {total_num}"
 
+        # 表示用データを先に作っておく
+        display_rows = []
+        for row in rows:
+            display_row = [row[0]]
+            for value in row[1:]:
+                percent = round(value / total_num * 100, 1)
+                display_row.append(percent)  # ←ソート用に数値のまま保持
+            display_rows.append(display_row)
+
         table_frame = Frame(self.simulation_body_frame)
         table_frame.pack(expand=True, fill="both")
 
@@ -285,18 +294,56 @@ class Application(Frame):
         y_scroll.config(command=tree.yview)
         x_scroll.config(command=tree.xview)
 
+        # ソート状態管理: {col: "asc" | "desc" | None}
+        sort_state = {col: None for col in columns}
+
+        def refresh_tree(data):
+            tree.delete(*tree.get_children())
+            for r in data:
+                display = [r[0]] + [f"{v}%" for v in r[1:]]
+                tree.insert("", END, values=display)
+
+        def sort_by(col):
+            col_idx = columns.index(col)
+            state = sort_state[col]
+
+            # 状態を次に進める: None→asc→desc→None
+            if state is None:
+                sort_state[col] = "asc"
+            elif state == "asc":
+                sort_state[col] = "desc"
+            else:
+                sort_state[col] = None
+
+            # 他の列のソート状態をリセット
+            for c in columns:
+                if c != col:
+                    sort_state[c] = None
+
+            new_state = sort_state[col]
+
+            if new_state is None:
+                sorted_data = display_rows  # 元の順序に戻す
+            else:
+                sorted_data = sorted(
+                    display_rows,
+                    key=lambda r: r[col_idx] if isinstance(r[col_idx], (int, float)) else 0,
+                    reverse=(new_state == "desc")
+                )
+
+            refresh_tree(sorted_data)
+
+            # ヘッダーに矢印を表示
+            for c in columns:
+                s = sort_state[c]
+                arrow = " ▲" if s == "asc" else " ▼" if s == "desc" else ""
+                tree.heading(c, text=c + arrow)
+
         for col in columns:
-            tree.heading(col, text=col)
+            tree.heading(col, text=col, command=lambda c=col: sort_by(c))
             tree.column(col, anchor="center", width=100)
 
-        for row in rows:
-            display_row = [row[0]]
-
-            for value in row[1:]:
-                percent = round(value / total_num * 100, 1)
-                display_row.append(f"{percent}%")
-
-            tree.insert("", END, values=display_row)
+        refresh_tree(display_rows)
 
         tree.pack(expand=True, fill="both")
 
@@ -761,7 +808,7 @@ class Application(Frame):
         simulation_margin_frame = Frame(self.simulation_frame)
         simulation_margin_frame.pack(expand=True, fill="both")
         self.simulation_body_frame = Frame(simulation_margin_frame)
-        self.simulation_body_frame.pack(expand=True)
+        self.simulation_body_frame.pack(expand=True, fill="both")
 
             # footer
         simulation_footer_frame = Frame(self.simulation_frame)
