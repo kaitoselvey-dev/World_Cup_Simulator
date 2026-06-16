@@ -1,0 +1,245 @@
+team,elo_rating,iso3
+Spain,2157,ESP
+Argentina,2114,ARG
+France,2063,FRA
+England,2021,ENG
+Brazil,1991,BRA
+Portugal,1986,PRT
+Colombia,1982,COL
+Netherlands,1948,NLD
+Ecuador,1938,ECU
+Germany,1932,DEU
+Norway,1914,NOR
+Croatia,1911,HRV
+Turkey,1911,TUR
+Japan,1906,JPN
+Belgium,1893,BEL
+Uruguay,1892,URY
+Switzerland,1891,CHE
+Mexico,1875,MEX
+Denmark,1869,DNK
+Italy,1869,ITA
+Senegal,1867,SEN
+Paraguay,1833,PRY
+Austria,1830,AUT
+Morocco,1827,MAR
+Canada,1788,CAN
+Scotland,1782,SCO
+Ukraine,1780,UKR
+Australia,1777,AUS
+Iran,1772,IRN
+Nigeria,1770,NGA
+Russia,1770,RUS
+Algeria,1760,DZA
+South Korea,1758,KOR
+Greece,1744,GRC
+Czechia,1740,CZ
+Serbia,1734,SRB
+Panama,1730,PAN
+United States,1726,USA
+Venezuela,1722,VEN
+Kosovo,1715,XKX
+Uzbekistan,1714,UZB
+Sweden,1712,SWE
+Poland,1710,POL
+Chile,1708,CHL
+Hungary,1707,HUN
+Peru,1699,PER
+Ireland,1699,IRL
+Egypt,1696,EGY
+Ivory Coast,1695,CIV
+Wales,1682,WAL
+Slovenia,1682,SVN
+Jordan,1680,JOR
+Slovakia,1667,SVK
+DR Congo,1661,COD
+Georgia,1654,GEO
+Israel,1647,ISR
+Romania,1639,ROU
+Bolivia,1633,BOL
+Tunisia,1628,TUN
+Iraq,1618,IRQ
+Albania,1616,ALB
+Cameroon,1613,CMR
+Costa Rica,1611,CRI
+Northern Ireland,1606,NIR
+Bosnia and Herzegovina,1595,BIH
+North Macedonia,1589,MKD
+Mali,1588,MLI
+Cape Verde,1578,CPV
+Honduras,1570,HND
+Saudi Arabia,1569,SAU
+Iceland,1569,ISL
+New Zealand,1562,NZL
+Haiti,1548,HTI
+United Arab Emirates,1540,ARE
+Angola,1537,AGO
+Finland,1536,FIN
+Jamaica,1527,JAM
+Burkina Faso,1526,BFA
+Belarus,1525,BLR
+South Africa,1518,ZAF
+Ghana,1510,GHA
+Guatemala,1504,GTM
+Syria,1479,SYR
+Oman,1479,OMN
+Palestine,1467,PSE
+Guinea,1463,GIN
+Montenegro,1460,MNE
+Bulgaria,1458,BGR
+Northern Cyprus,1457,NS
+Luxembourg,1450,LUX
+Curacao,1434,CUW
+Kazakhstan,1431,KAZ
+Suriname,1431,SUR
+China,1428,CHN
+Benin,1428,BEN
+Kurdistan,1425,KD
+Qatar,1421,QAT
+Libya,1420,LBY
+Gambia,1419,GMB
+Bahrain,1414,BHR
+Gabon,1401,GAB
+Uganda,1394,UGA
+Equatorial Guinea,1391,GNQ
+Trinidad and Tobago,1388,TTO
+Niger,1382,NER
+Madagascar,1380,MDG
+Armenia,1378,ARM
+North Korea,1375,PRK
+Zimbabwe,1372,ZWE
+Thailand,1372,THA
+Zambia,1371,ZMB
+Faroe Islands,1368,FRO
+Kenya,1363,KEN
+Comoros,1363,COM
+Indonesia,1362,IDN
+Togo,1356,TGO
+Sierra Leone,1354,SLE
+Mozambique,1352,MOZ
+Estonia,1352,EST
+Vietnam,1351,VNM
+Sudan,1350,SDN
+Reunion,1345,RE
+El Salvador,1342,SLV
+Guadeloupe,1338,GP
+Rwanda,1337,RWA
+Nicaragua,1333,NIC
+Kuwait,1331,KWT
+Mauritania,1329,MRT
+Azerbaijan,1321,AZE
+Zanzibar,1321,ZN
+Cyprus,1314,CYP
+Tanzania,1313,TZA
+Martinique,1312,MQ
+Latvia,1305,LVA
+Namibia,1303,NAM
+Malaysia,1293,MYS
+Kyrgyzstan,1293,KGZ
+Guyana,1292,GUY
+Liberia,1291,LBR
+Ethiopia,1291,ETH
+Tajikistan,1290,TJK
+Lebanon,1288,LBN
+New Caledonia,1286,NCL
+Lithuania,1286,LTU
+Burundi,1285,BDI
+Dominican Republic,1283,DOM
+Botswana,1267,BWA
+Moldova,1265,MDA
+Malta,1255,MLT
+Guinea-Bissau,1248,GNB
+Central African Republic,1241,CAF
+Cuba,1239,CUB
+Malawi,1235,MWI
+French Guiana,1223,GF
+Mayotte,1216,YT
+Turkmenistan,1209,TKM
+Congo,1207,COG
+Eritrea,1201,ER
+Lesotho,1198,LSO
+Yemen,1195,YEM
+Tahiti,1176,PYF
+Philippines,1169,PHL
+Eswatini,1149,SWZ
+Saint Vincent and the Grenadines,1141,VCT
+Papua New Guinea,1135,PNG
+Puerto Rico,1135,PRI
+Singapore,1134,SGP
+Hong Kong,1122,HKG
+India,1122,IND
+Vanuatu,1118,VUT
+Bermuda,1117,BMU
+South Sudan,1109,SSD
+Fiji,1104,FJI
+Grenada,1098,GRD
+Andorra,1080,AND
+Mauritius,1073,MUS
+Chad,1073,TCD
+Belize,1073,BLZ
+Solomon Islands,1054,SLB
+Saint Martin,1042,MF
+Sao Tome and Principe,1035,ST
+Saint Kitts and Nevis,1029,KNA
+Gibraltar,1011,GIB
+Somaliland,1005,JS
+Saint Lucia,1003,LCA
+Western Sahara,996,EH
+Myanmar,993,MMR
+Afghanistan,990,AFG
+Somalia,979,SOM
+Aruba,978,ABW
+Sint Maarten,975,SX
+Montserrat,971,MSR
+Greenland,946,GL
+Bangladesh,942,BGD
+Djibouti,940,DJI
+Dominica,934,DMA
+Monaco,903,MC
+Barbados,898,BRB
+Liechtenstein,895,LIE
+Antigua and Barbuda,894,ATG
+Nepal,893,NPL
+Pakistan,880,PAK
+Seychelles,853,SYC
+Cambodia,849,KHM
+Sri Lanka,836,LKA
+San Marino,826,SM
+Taiwan,821,TW
+Bonaire,816,BQ
+Maldives,801,MDV
+Cayman Islands,800,CYM
+Chagos Islands,782,HG
+Tuvalu,756,TV
+British Virgin Islands,743,VGB
+Sint Eustatius,737,EU
+Laos,734,LAO
+Samoa,728,WSM
+Mongolia,725,MNG
+Saint Barthelemy,725,BL
+East Timor,714,TL
+Guam,705,GUM
+Wallis and Futuna,699,WF
+Vatican,692,VA
+Saba,691,AB
+Bahamas,685,BHS
+Saint Pierre and Miquelon,677,PM
+Turks and Caicos Islands,657,TCA
+Anguilla,646,AIA
+Tibet,629,TE
+US Virgin Islands,628,VI
+Cook Islands,622,COK
+Bhutan,622,BTN
+Brunei,592,BRN
+Macao,588,MO
+Christmas Island,578,CX
+Falkland Islands,571,FK
+FS Micronesia,563,FM
+Marshall Islands,559,MH
+Kiribati,544,KI
+Tonga,520,TON
+Niue,496,NU
+Northern Mariana Islands,432,MP
+Cocos Islands,422,CC
+Palau,402,PW
+Eastern Samoa,369,AS
