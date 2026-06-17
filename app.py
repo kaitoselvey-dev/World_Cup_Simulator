@@ -851,17 +851,18 @@ class Application(Frame):
         Label(see_tournament_header_frame, text="See Tournament Stage", font=FONT_TITLE).pack(side="top", pady=(0, 14))
         Label(see_tournament_header_frame, text="Based on finished games, your prediction, and simulation").pack(side="top", pady=(0, 14))
 
+            # footer
+        see_tournament_footer_frame = Frame(self.see_tournament_frame)
+        see_tournament_footer_frame.pack(side="bottom", fill="x")
+        Button(see_tournament_footer_frame, text="return", width=10, command=self.show_main).pack(padx=5, pady=5, side="left")
+        Button(see_tournament_footer_frame, text="clear all", width=10, command=self.clear_all).pack(padx=5, pady=5, side="right")
+
             # main
         see_tournament_margin_frame = Frame(self.see_tournament_frame)
         see_tournament_margin_frame.pack(expand=True, fill="both")
         self.see_tournament_body_frame = Frame(see_tournament_margin_frame)
         self.see_tournament_body_frame.pack(expand=True, fill="both")
 
-            # footer
-        see_tournament_footer_frame = Frame(self.see_tournament_frame)
-        see_tournament_footer_frame.pack()
-        Button(see_tournament_footer_frame, text="return", width=10, command=self.show_main).pack(padx=5, pady=5, side="left")
-        Button(see_tournament_footer_frame, text="clear all", width=10, command=self.clear_all).pack(padx=5, pady=5, side="right")
 
         ## developer frames ##
 
@@ -920,18 +921,18 @@ class Application(Frame):
         dev_tournament_header_frame.pack()
         Label(dev_tournament_header_frame, text="Update Tournament Stage", font=FONT_TITLE).pack(side="top", pady=(0, 14))
 
+            # footer
+        dev_tournament_footer_frame = Frame(self.dev_tournament_frame)
+        dev_tournament_footer_frame.pack(fill="x", expand=True)
+        Button(dev_tournament_footer_frame, text="return", width=10, command=self.show_start).pack(padx=5, pady=5, side="left")
+        Button(dev_tournament_footer_frame, text="clear all", width=10, command=self.dev_clear_all).pack(padx=5, pady=5, side="right")
+        Button(dev_tournament_footer_frame, text="submit", width=10, command=self.dev_submit_tm).pack(padx=5, pady=5, side="bottom")
+
             # main
         dev_tournament_margin_frame = Frame(self.dev_tournament_frame)
         dev_tournament_margin_frame.pack(expand=True, fill="both")
         self.dev_tournament_body_frame = Frame(dev_tournament_margin_frame)
         self.dev_tournament_body_frame.pack(expand=True, fill="both")
-
-            # footer
-        dev_tournament_footer_frame = Frame(self.dev_tournament_frame)
-        dev_tournament_footer_frame.pack()
-        Button(dev_tournament_footer_frame, text="return", width=10, command=self.show_start).pack(padx=5, pady=5, side="left")
-        Button(dev_tournament_footer_frame, text="clear all", width=10, command=self.dev_clear_all).pack(padx=5, pady=5, side="right")
-        Button(dev_tournament_footer_frame, text="submit", width=10, command=self.dev_submit_tm).pack(padx=5, pady=5, side="bottom")
 
 
     ## developer tools ##
@@ -1176,14 +1177,14 @@ class Application(Frame):
             widget.destroy()
 
         self.root.geometry("1700x900")
-        self.root.maxsize(1700, 855)
+        self.root.maxsize(1700, 900)
 
         hbar = Scrollbar(self.dev_tournament_body_frame, orient="horizontal")
         hbar.pack(side="bottom", fill="x")
         vbar = Scrollbar(self.dev_tournament_body_frame, orient="vertical")
         vbar.pack(side="right", fill="y")
 
-        canvas = Canvas(self.dev_tournament_body_frame, width=1700, height=655,
+        canvas = Canvas(self.dev_tournament_body_frame,
                         xscrollcommand=hbar.set, yscrollcommand=vbar.set)
         canvas.pack(fill="both", expand=True)
         hbar.config(command=canvas.xview)
