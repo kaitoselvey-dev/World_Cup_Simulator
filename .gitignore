@@ -22,4 +22,4 @@ Thumbs.db
 *.log
 
 unnecessary/
-test.py
+*_test.py

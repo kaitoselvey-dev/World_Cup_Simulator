@@ -88,7 +88,7 @@ class Application(Frame):
         super().__init__(root, width=980, height=580,
                          borderwidth=0, relief='flat', bg=COLORS["bg"])
         self.root = root
-        self.pack(expand=True, fill="both", padx=18, pady=18)
+        self.pack(expand=True, fill="both", padx=18, pady=3)
         self.pack_propagate(0)
         self.main_title = StringVar(value="main_title")
         self.create_widgets() 
@@ -558,15 +558,8 @@ class Application(Frame):
         for widget in self.see_tournament_body_frame.winfo_children():
             widget.destroy()
 
-        self.root.geometry("1700x900")
-        self.root.maxsize(1700, 900)
-        canvas = Canvas(self.see_tournament_body_frame, width=1700, height=655)
-        hbar = Scrollbar(self.see_tournament_body_frame, orient="horizontal", command=canvas.xview)
-        hbar.pack(side="bottom", fill="x")
-        vbar = Scrollbar(self.see_tournament_body_frame, orient="vertical", command=canvas.yview)
-        vbar.pack(side="right", fill="y")
-        canvas.configure(xscrollcommand=hbar.set, yscrollcommand=vbar.set)
-
+        self.root.geometry("1920x1080")
+        canvas = Canvas(self.see_tournament_body_frame, width=1160, height=655)
         canvas.pack(fill="both", expand=True)
 
         def place_btn(widget, x, y):
@@ -574,8 +567,8 @@ class Application(Frame):
 
         self.buttons_32l = []
         for i,m in enumerate(self.fin_tournament_32[:8]):
-            self.buttons_32l.append(Button(canvas, text=m[0], width=20, command=lambda idx=i*2: self.to_16l(idx), disabledforeground="#ffffff"))
-            self.buttons_32l.append(Button(canvas, text=m[1], width=20, command=lambda idx=i*2+1: self.to_16l(idx), disabledforeground="#ffffff"))
+            self.buttons_32l.append(Button(canvas, text=m[0], width=11, command=lambda idx=i*2: self.to_16l(idx), disabledforeground="#ffffff"))
+            self.buttons_32l.append(Button(canvas, text=m[1], width=11, command=lambda idx=i*2+1: self.to_16l(idx), disabledforeground="#ffffff"))
             place_btn(self.buttons_32l[i*2],   0, 85*i)
             place_btn(self.buttons_32l[i*2+1], 0, 85*i+35)
 
@@ -588,12 +581,12 @@ class Application(Frame):
         funcs_l = [self.to_8l, self.to_4l, self.to_2l]
         for i in range(3):
             for j in range(2**(3-i)):
-                b = Button(canvas, text="None", width=20, command=lambda idx1=i, idx2=j: funcs_l[idx1](idx2), disabledforeground="#ffffff")
-                place_btn(b, 200*(i+1), j * 85*2**(i) + pad[i])
+                b = Button(canvas, text="None", width=11, command=lambda idx1=i, idx2=j: funcs_l[idx1](idx2), disabledforeground="#ffffff")
+                place_btn(b, 120*(i+1), j * 85*2**(i) + pad[i])
                 self.buttons_l[i].append(b)
 
-        self.button_2l = Button(canvas, text="None", width=20, command=lambda: self.to_champ(0), disabledforeground="#ffffff")
-        place_btn(self.button_2l, 650, 315)
+        self.button_2l = Button(canvas, text="None", width=11, command=lambda: self.to_champ(0), disabledforeground="#ffffff")
+        place_btn(self.button_2l, 480, 315)
 
         self.buttons_16r = []
         self.buttons_8r = []
@@ -602,81 +595,73 @@ class Application(Frame):
         funcs_r = [self.to_8r, self.to_4r, self.to_2r]
         for i in range(3):
             for j in range(2**(1+i)):
-                b = Button(canvas, text="None", width=20, command=lambda idx1=2-i, idx2=j: funcs_r[idx1](idx2), disabledforeground="#ffffff")
-                place_btn(b, 200*(i+4) + 100, j * 85*2**(2-i) + pad[2-i])
+                b = Button(canvas, text="None", width=11, command=lambda idx1=2-i, idx2=j: funcs_r[idx1](idx2), disabledforeground="#ffffff")
+                place_btn(b, 1160 - 120*(3-i), j * 85*2**(2-i) + pad[2-i])
                 self.buttons_r[2-i].append(b)
 
-        self.button_2r = Button(canvas, text="None", width=20, command=lambda: self.to_champ(1), disabledforeground="#ffffff")
-        place_btn(self.button_2r, 850, 315)
+        self.button_2r = Button(canvas, text="None", width=11, command=lambda: self.to_champ(1), disabledforeground="#ffffff")
+        place_btn(self.button_2r, 680, 315)
 
         self.buttons_32r = []
         for i, m in enumerate(self.fin_tournament_32[8:]):
-            self.buttons_32r.append(Button(canvas, text=m[0], width=20, command=lambda idx=i*2: self.to_16r(idx), disabledforeground="#ffffff"))
-            self.buttons_32r.append(Button(canvas, text=m[1], width=20, command=lambda idx=i*2+1: self.to_16r(idx), disabledforeground="#ffffff"))
-            place_btn(self.buttons_32r[i*2],   1500, 85*i)
-            place_btn(self.buttons_32r[i*2+1], 1500, 85*i+35)
+            self.buttons_32r.append(Button(canvas, text=m[0], width=11, command=lambda idx=i*2: self.to_16r(idx), disabledforeground="#ffffff"))
+            self.buttons_32r.append(Button(canvas, text=m[1], width=11, command=lambda idx=i*2+1: self.to_16r(idx), disabledforeground="#ffffff"))
+            place_btn(self.buttons_32r[i*2],   1160, 85*i)
+            place_btn(self.buttons_32r[i*2+1], 1160, 85*i+35)
 
-        self.button_champ = Button(canvas, text="None", width=20, disabledforeground="#ffffff")
-        place_btn(self.button_champ, 750, 380)
+        self.button_champ = Button(canvas, text="None", width=11, disabledforeground="#ffffff")
+        place_btn(self.button_champ, 580, 370)
         lbl = Label(canvas, text="Champion 🏆", font="Arial")
-        canvas.create_window(765, 350, window=lbl, anchor="nw")
+        canvas.create_window(555, 410, window=lbl, anchor="nw")
 
         for i in range(8):
-            canvas.create_line(145, 85*i+12, 175, 85*i+12)
-            canvas.create_line(145, 85*i+47, 175, 85*i+47)
-            canvas.create_line(175, 85*i+12, 175, 85*i+48)
-            canvas.create_line(175, 85*i+30, 200, 85*i+30)
-
-        for i in range(4):
-            canvas.create_line(345, 85*2*i+30, 375, 85*2*i+30)
-            canvas.create_line(345, 85*2*i+115, 375, 85*2*i+115)
-            canvas.create_line(375, 85*2*i+30, 375, 85*2*i+116)
-            canvas.create_line(375, 85*2*i+73, 400, 85*2*i+73)
-
-        for i in range(2):
-            canvas.create_line(545, 85*4*i+73, 575, 85*4*i+73)
-            canvas.create_line(545, 85*4*i+243, 575, 85*4*i+243)
-            canvas.create_line(575, 85*4*i+73, 575, 85*4*i+244)
-            canvas.create_line(575, 85*4*i+159, 600, 85*4*i+159)
+            canvas.create_line(83, 13+85*i, 101, 13+85*i)
+            canvas.create_line(83, 48+85*i, 101, 48+85*i)
+            canvas.create_line(101, 13+85*i, 101, 49+85*i)
+            canvas.create_line(101, 30+85*i, 120, 30+85*i)
 
         for i in range(8):
-            canvas.create_line(1505, 85*i+12, 1470, 85*i+12)
-            canvas.create_line(1505, 85*i+47, 1470, 85*i+47)
-            canvas.create_line(1470, 85*i+12, 1470, 85*i+49)
-            canvas.create_line(1470, 85*i+30, 1445, 85*i+30)
+            canvas.create_line(1160, 13+85*i, 1142, 13+85*i)
+            canvas.create_line(1160, 48+85*i, 1142, 48+85*i)
+            canvas.create_line(1142, 13+85*i, 1142, 49+85*i)
+            canvas.create_line(1141, 30+85*i, 1040, 30+85*i)
 
         for i in range(4):
-            canvas.create_line(1300, 85*2*i+30, 1270, 85*2*i+30)
-            canvas.create_line(1300, 85*2*i+115, 1270, 85*2*i+115)
-            canvas.create_line(1270, 85*2*i+30, 1270, 85*2*i+116)
-            canvas.create_line(1270, 85*2*i+73, 1245, 85*2*i+73)
+            canvas.create_line(83+120, 30+85*i*2, 101+120, 30+85*i*2)
+            canvas.create_line(83+120, 115+85*i*2, 101+120, 115+85*i*2)
+            canvas.create_line(101+120, 30+85*i*2, 101+120, 116+85*i*2)
+            canvas.create_line(101+120, 72+85*i*2, 120+120, 72+85*i*2)
+
+        for i in range(4):
+            canvas.create_line(1160-120, 30+85*i*2, 1142-120, 30+85*i*2)
+            canvas.create_line(1160-120, 115+85*i*2, 1142-120, 115+85*i*2)
+            canvas.create_line(1142-120, 30+85*i*2, 1142-120, 116+85*i*2)
+            canvas.create_line(1141-120, 72+85*i*2, 1123-120, 72+85*i*2)
 
         for i in range(2):
-            canvas.create_line(1100, 85*4*i+73, 1070, 85*4*i+73)
-            canvas.create_line(1100, 85*4*i+243, 1070, 85*4*i+243)
-            canvas.create_line(1070, 85*4*i+73, 1070, 85*4*i+244)
-            canvas.create_line(1070, 85*4*i+159, 1045, 85*4*i+159)
+            canvas.create_line(83+120*2, 72+85*i*4, 101+120*2, 72+85*i*4)
+            canvas.create_line(83+120*2, 242+85*i*4, 101+120*2, 242+85*i*4)
+            canvas.create_line(101+120*2, 72+85*i*4, 101+120*2, 243+85*i*4)
+            canvas.create_line(101+120*2, 157+85*i*4, 120+120*2, 157+85*i*4)
 
-        canvas.create_line(610, 159, 610, 499)
-        canvas.create_line(610, 330, 680, 330)
-        canvas.create_line(1035, 159, 1035, 499)
-        canvas.create_line(1035, 330, 965, 330)
+        for i in range(2):
+            canvas.create_line(1160-120*2, 72+85*i*4, 1142-120*2, 72+85*i*4)
+            canvas.create_line(1160-120*2, 242+85*i*4, 1142-120*2, 242+85*i*4)
+            canvas.create_line(1142-120*2, 72+85*i*4, 1142-120*2, 243+85*i*4)
+            canvas.create_line(1141-120*2, 157+85*i*4, 1123-120*2, 157+85*i*4)
 
-        def _scroll_y(event):
-            canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+        canvas.create_line(83+120*3, 157, 101+120*3, 157)
+        canvas.create_line(83+120*3, 497, 101+120*3, 497)
+        canvas.create_line(101+120*3, 157, 101+120*3, 498)
+        canvas.create_line(101+120*3, 327, 120+120*3, 327)    
 
-        def _scroll_x(event):
-            canvas.xview_scroll(int(-1 * (event.delta / 120)), "units")
+        canvas.create_line(1160-120*3, 157, 1142-120*3, 157)
+        canvas.create_line(1160-120*3, 497, 1142-120*3, 497)
+        canvas.create_line(1142-120*3, 157, 1142-120*3, 498)
+        canvas.create_line(1141-120*3, 327, 1123-120*3, 327)     
 
-        def _on_mousewheel(event):
-            if event.state & 0x4:  # Ctrlキーが押されているか
-                _scroll_x(event)
-            else:
-                _scroll_y(event)
-
-        canvas.bind("<MouseWheel>", _on_mousewheel)
-
-        canvas.configure(scrollregion=(0,0,1700,655))
+        canvas.create_line(184+120*3, 327, 1040-120*3, 327)
+        canvas.create_line(622, 327, 622, 370)
 
         self.input_fin_tournament()
 
@@ -848,12 +833,12 @@ class Application(Frame):
             # header
         see_tournament_header_frame = Frame(self.see_tournament_frame)
         see_tournament_header_frame.pack()
-        Label(see_tournament_header_frame, text="See Tournament Stage", font=FONT_TITLE).pack(side="top", pady=(0, 14))
-        Label(see_tournament_header_frame, text="Based on finished games, your prediction, and simulation").pack(side="top", pady=(0, 14))
+        Label(see_tournament_header_frame, text="See Tournament Stage", font=FONT_TITLE).pack(side="top", pady=3)
+        # Label(see_tournament_header_frame, text="Based on finished games, your prediction, and simulation").pack(side="top", pady=(0, 14))
 
             # footer
         see_tournament_footer_frame = Frame(self.see_tournament_frame)
-        see_tournament_footer_frame.pack(side="bottom", fill="x")
+        see_tournament_footer_frame.pack(side="bottom")
         Button(see_tournament_footer_frame, text="return", width=10, command=self.show_main).pack(padx=5, pady=5, side="left")
         Button(see_tournament_footer_frame, text="clear all", width=10, command=self.clear_all).pack(padx=5, pady=5, side="right")
 
@@ -933,7 +918,6 @@ class Application(Frame):
         dev_tournament_margin_frame.pack(expand=True, fill="both")
         self.dev_tournament_body_frame = Frame(dev_tournament_margin_frame)
         self.dev_tournament_body_frame.pack(expand=True, fill="both")
-
 
     ## developer tools ##
     def dev_page(self):
@@ -1106,6 +1090,8 @@ class Application(Frame):
 
         else:
             tournament = main(conn=self.conn_user, ID=self.ID)[0]
+            if "Bosnia and Herzegovina" in tournament:
+                tournament[tournament.index("Bosnia and Herzegovina")] = "Bos and Herz"
             tm_game_list = []
 
             for i in range(16):
@@ -1176,35 +1162,18 @@ class Application(Frame):
         for widget in self.dev_tournament_body_frame.winfo_children():
             widget.destroy()
 
-        self.root.geometry("1700x900")
-        self.root.maxsize(1700, 900)
+        self.root.geometry("1920x1080")
 
-        hbar = Scrollbar(self.dev_tournament_body_frame, orient="horizontal")
-        hbar.pack(side="bottom", fill="x")
-        vbar = Scrollbar(self.dev_tournament_body_frame, orient="vertical")
-        vbar.pack(side="right", fill="y")
-
-        canvas = Canvas(self.dev_tournament_body_frame,
-                        xscrollcommand=hbar.set, yscrollcommand=vbar.set)
+        canvas = Canvas(self.dev_tournament_body_frame, width=1160, height=655)
         canvas.pack(fill="both", expand=True)
-        hbar.config(command=canvas.xview)
-        vbar.config(command=canvas.yview)
-
-        def _on_mousewheel(event):
-            if event.state & 0x4:
-                canvas.xview_scroll(int(-1 * (event.delta / 120)), "units")
-            else:
-                canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
-
-        canvas.bind("<MouseWheel>", _on_mousewheel)
 
         def place_btn(widget, x, y):
             canvas.create_window(x, y, window=widget, anchor="nw")
 
         self.buttons_32l = []
-        for i, m in enumerate(self.fin_tournament_32[:8]):
-            self.buttons_32l.append(Button(canvas, text=m[0], width=20, command=lambda idx=i*2: self.to_16l(idx)))
-            self.buttons_32l.append(Button(canvas, text=m[1], width=20, command=lambda idx=i*2+1: self.to_16l(idx)))
+        for i,m in enumerate(self.fin_tournament_32[:8]):
+            self.buttons_32l.append(Button(canvas, text=m[0], width=11, command=lambda idx=i*2: self.to_16l(idx), disabledforeground="#ffffff"))
+            self.buttons_32l.append(Button(canvas, text=m[1], width=11, command=lambda idx=i*2+1: self.to_16l(idx), disabledforeground="#ffffff"))
             place_btn(self.buttons_32l[i*2],   0, 85*i)
             place_btn(self.buttons_32l[i*2+1], 0, 85*i+35)
 
@@ -1217,12 +1186,12 @@ class Application(Frame):
         funcs_l = [self.to_8l, self.to_4l, self.to_2l]
         for i in range(3):
             for j in range(2**(3-i)):
-                b = Button(canvas, text="None", width=20, command=lambda idx1=i, idx2=j: funcs_l[idx1](idx2))
-                place_btn(b, 200*(i+1), j * 85*2**(i) + pad[i])
+                b = Button(canvas, text="None", width=11, command=lambda idx1=i, idx2=j: funcs_l[idx1](idx2), disabledforeground="#ffffff")
+                place_btn(b, 120*(i+1), j * 85*2**(i) + pad[i])
                 self.buttons_l[i].append(b)
 
-        self.button_2l = Button(canvas, text="None", width=20, command=lambda: self.to_champ(0))
-        place_btn(self.button_2l, 650, 315)
+        self.button_2l = Button(canvas, text="None", width=11, command=lambda: self.to_champ(0), disabledforeground="#ffffff")
+        place_btn(self.button_2l, 480, 315)
 
         self.buttons_16r = []
         self.buttons_8r = []
@@ -1231,68 +1200,73 @@ class Application(Frame):
         funcs_r = [self.to_8r, self.to_4r, self.to_2r]
         for i in range(3):
             for j in range(2**(1+i)):
-                b = Button(canvas, text="None", width=20, command=lambda idx1=2-i, idx2=j: funcs_r[idx1](idx2))
-                place_btn(b, 200*(i+4) + 100, j * 85*2**(2-i) + pad[2-i])
+                b = Button(canvas, text="None", width=11, command=lambda idx1=2-i, idx2=j: funcs_r[idx1](idx2), disabledforeground="#ffffff")
+                place_btn(b, 1160 - 120*(3-i), j * 85*2**(2-i) + pad[2-i])
                 self.buttons_r[2-i].append(b)
 
-        self.button_2r = Button(canvas, text="None", width=20, command=lambda: self.to_champ(1))
-        place_btn(self.button_2r, 850, 315)
+        self.button_2r = Button(canvas, text="None", width=11, command=lambda: self.to_champ(1), disabledforeground="#ffffff")
+        place_btn(self.button_2r, 680, 315)
 
         self.buttons_32r = []
         for i, m in enumerate(self.fin_tournament_32[8:]):
-            self.buttons_32r.append(Button(canvas, text=m[0], width=20, command=lambda idx=i*2: self.to_16r(idx)))
-            self.buttons_32r.append(Button(canvas, text=m[1], width=20, command=lambda idx=i*2+1: self.to_16r(idx)))
-            place_btn(self.buttons_32r[i*2],   1500, 85*i)
-            place_btn(self.buttons_32r[i*2+1], 1500, 85*i+35)
+            self.buttons_32r.append(Button(canvas, text=m[0], width=11, command=lambda idx=i*2: self.to_16r(idx), disabledforeground="#ffffff"))
+            self.buttons_32r.append(Button(canvas, text=m[1], width=11, command=lambda idx=i*2+1: self.to_16r(idx), disabledforeground="#ffffff"))
+            place_btn(self.buttons_32r[i*2],   1160, 85*i)
+            place_btn(self.buttons_32r[i*2+1], 1160, 85*i+35)
 
-        self.button_champ = Button(canvas, text="None", width=20)
-        place_btn(self.button_champ, 750, 380)
+        self.button_champ = Button(canvas, text="None", width=11, disabledforeground="#ffffff")
+        place_btn(self.button_champ, 580, 370)
         lbl = Label(canvas, text="Champion 🏆", font="Arial")
-        canvas.create_window(765, 350, window=lbl, anchor="nw")
+        canvas.create_window(555, 410, window=lbl, anchor="nw")
 
         for i in range(8):
-            canvas.create_line(145, 85*i+12, 175, 85*i+12)
-            canvas.create_line(145, 85*i+47, 175, 85*i+47)
-            canvas.create_line(175, 85*i+12, 175, 85*i+48)
-            canvas.create_line(175, 85*i+30, 200, 85*i+30)
-
-        for i in range(4):
-            canvas.create_line(345, 85*2*i+30, 375, 85*2*i+30)
-            canvas.create_line(345, 85*2*i+115, 375, 85*2*i+115)
-            canvas.create_line(375, 85*2*i+30, 375, 85*2*i+116)
-            canvas.create_line(375, 85*2*i+73, 400, 85*2*i+73)
-
-        for i in range(2):
-            canvas.create_line(545, 85*4*i+73, 575, 85*4*i+73)
-            canvas.create_line(545, 85*4*i+243, 575, 85*4*i+243)
-            canvas.create_line(575, 85*4*i+73, 575, 85*4*i+244)
-            canvas.create_line(575, 85*4*i+159, 600, 85*4*i+159)
+            canvas.create_line(83, 13+85*i, 101, 13+85*i)
+            canvas.create_line(83, 48+85*i, 101, 48+85*i)
+            canvas.create_line(101, 13+85*i, 101, 49+85*i)
+            canvas.create_line(101, 30+85*i, 120, 30+85*i)
 
         for i in range(8):
-            canvas.create_line(1505, 85*i+12, 1470, 85*i+12)
-            canvas.create_line(1505, 85*i+47, 1470, 85*i+47)
-            canvas.create_line(1470, 85*i+12, 1470, 85*i+49)
-            canvas.create_line(1470, 85*i+30, 1445, 85*i+30)
+            canvas.create_line(1160, 13+85*i, 1142, 13+85*i)
+            canvas.create_line(1160, 48+85*i, 1142, 48+85*i)
+            canvas.create_line(1142, 13+85*i, 1142, 49+85*i)
+            canvas.create_line(1141, 30+85*i, 1040, 30+85*i)
 
         for i in range(4):
-            canvas.create_line(1300, 85*2*i+30, 1270, 85*2*i+30)
-            canvas.create_line(1300, 85*2*i+115, 1270, 85*2*i+115)
-            canvas.create_line(1270, 85*2*i+30, 1270, 85*2*i+116)
-            canvas.create_line(1270, 85*2*i+73, 1245, 85*2*i+73)
+            canvas.create_line(83+120, 30+85*i*2, 101+120, 30+85*i*2)
+            canvas.create_line(83+120, 115+85*i*2, 101+120, 115+85*i*2)
+            canvas.create_line(101+120, 30+85*i*2, 101+120, 116+85*i*2)
+            canvas.create_line(101+120, 72+85*i*2, 120+120, 72+85*i*2)
+
+        for i in range(4):
+            canvas.create_line(1160-120, 30+85*i*2, 1142-120, 30+85*i*2)
+            canvas.create_line(1160-120, 115+85*i*2, 1142-120, 115+85*i*2)
+            canvas.create_line(1142-120, 30+85*i*2, 1142-120, 116+85*i*2)
+            canvas.create_line(1141-120, 72+85*i*2, 1123-120, 72+85*i*2)
 
         for i in range(2):
-            canvas.create_line(1100, 85*4*i+73, 1070, 85*4*i+73)
-            canvas.create_line(1100, 85*4*i+243, 1070, 85*4*i+243)
-            canvas.create_line(1070, 85*4*i+73, 1070, 85*4*i+244)
-            canvas.create_line(1070, 85*4*i+159, 1045, 85*4*i+159)
+            canvas.create_line(83+120*2, 72+85*i*4, 101+120*2, 72+85*i*4)
+            canvas.create_line(83+120*2, 242+85*i*4, 101+120*2, 242+85*i*4)
+            canvas.create_line(101+120*2, 72+85*i*4, 101+120*2, 243+85*i*4)
+            canvas.create_line(101+120*2, 157+85*i*4, 120+120*2, 157+85*i*4)
 
-        canvas.create_line(610, 159, 610, 499)
-        canvas.create_line(610, 330, 680, 330)
-        canvas.create_line(1035, 159, 1035, 499)
-        canvas.create_line(1035, 330, 965, 330)
+        for i in range(2):
+            canvas.create_line(1160-120*2, 72+85*i*4, 1142-120*2, 72+85*i*4)
+            canvas.create_line(1160-120*2, 242+85*i*4, 1142-120*2, 242+85*i*4)
+            canvas.create_line(1142-120*2, 72+85*i*4, 1142-120*2, 243+85*i*4)
+            canvas.create_line(1141-120*2, 157+85*i*4, 1123-120*2, 157+85*i*4)
 
-        canvas.configure(scrollregion=(0, 0, 1700, 655))
+        canvas.create_line(83+120*3, 157, 101+120*3, 157)
+        canvas.create_line(83+120*3, 497, 101+120*3, 497)
+        canvas.create_line(101+120*3, 157, 101+120*3, 498)
+        canvas.create_line(101+120*3, 327, 120+120*3, 327)    
 
+        canvas.create_line(1160-120*3, 157, 1142-120*3, 157)
+        canvas.create_line(1160-120*3, 497, 1142-120*3, 497)
+        canvas.create_line(1142-120*3, 157, 1142-120*3, 498)
+        canvas.create_line(1141-120*3, 327, 1123-120*3, 327)     
+
+        canvas.create_line(184+120*3, 327, 1040-120*3, 327)
+        canvas.create_line(622, 327, 622, 370)
         self.dev_input_fin_tournament()
 
     def to_16l(self, idx):
