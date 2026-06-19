@@ -115,9 +115,10 @@ def main(conn, ID="kaito_dev", iso=False):
 
     return_list = tournament_record.copy()
 
-    # ここに重複処理
-    for i in range(6):
-        tournament_record[i] = [x for x in tournament_record[i] if x not in tournament_record[i + 1]]
+    if True:
+        # ここに重複処理
+        for i in range(6):
+            tournament_record[i] = [x for x in tournament_record[i] if x not in tournament_record[i + 1]]
 
     for i, round_num in enumerate([32, 16, 8, 4, 3, 2, 1]):
         for team in tournament_record[i]:

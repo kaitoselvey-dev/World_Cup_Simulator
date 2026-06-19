@@ -1,157 +1,157 @@
 team,elo_rating,iso3
-Spain,2157,ESP
-Argentina,2114,ARG
-France,2063,FRA
-England,2021,ENG
-Brazil,1991,BRA
-Portugal,1986,PRT
-Colombia,1982,COL
-Netherlands,1948,NLD
-Ecuador,1938,ECU
-Germany,1932,DEU
-Norway,1914,NOR
-Croatia,1911,HRV
-Turkey,1911,TUR
-Japan,1906,JPN
-Belgium,1893,BEL
-Uruguay,1892,URY
-Switzerland,1891,CHE
-Mexico,1875,MEX
+Spain,2129,ESP
+Argentina,2128,ARG
+France,2084,FRA
+England,2055,ENG
+Colombia,1998,COL
+Brazil,1978,BRA
+Portugal,1967,PRT
+Netherlands,1944,NLD
+Germany,1939,DEU
+Norway,1929,NOR
+Japan,1910,JPN
+Ecuador,1890,ECU
+Croatia,1881,HRV
+Mexico,1881,MEX
+Belgium,1879,BEL
+Uruguay,1870,URY
 Denmark,1869,DNK
 Italy,1869,ITA
-Senegal,1867,SEN
-Paraguay,1833,PRY
-Austria,1830,AUT
-Morocco,1827,MAR
-Canada,1788,CAN
-Scotland,1782,SCO
+Switzerland,1865,CHE
+Austria,1857,AUT
+Turkey,1849,TUR
+Morocco,1840,MAR
+Australia,1839,AUS
+Senegal,1839,SEN
+Scotland,1794,SCO
+South Korea,1786,KOR
+Paraguay,1780,PRY
 Ukraine,1780,UKR
-Australia,1777,AUS
-Iran,1772,IRN
-Nigeria,1770,NGA
-Russia,1770,RUS
-Algeria,1760,DZA
-South Korea,1758,KOR
+United States,1780,USA
+Russia,1772,RUS
+Canada,1767,CAN
+Nigeria,1767,NGA
+Algeria,1759,DZA
+Iran,1756,IRN
+Sweden,1755,SWE
 Greece,1744,GRC
-Czechia,1740,CZ
+Ivory Coast,1743,CIV
 Serbia,1734,SRB
-Panama,1730,PAN
-United States,1726,USA
-Venezuela,1722,VEN
+Venezuela,1733,VEN
+Chile,1717,CHL
 Kosovo,1715,XKX
-Uzbekistan,1714,UZB
-Sweden,1712,SWE
+Czechia,1712,CZE
+Egypt,1711,EGY
+Hungary,1710,HUN
 Poland,1710,POL
-Chile,1708,CHL
-Hungary,1707,HUN
-Peru,1699,PER
+Peru,1700,PER
 Ireland,1699,IRL
-Egypt,1696,EGY
-Ivory Coast,1695,CIV
+Uzbekistan,1698,UZB
+Panama,1683,PAN
 Wales,1682,WAL
 Slovenia,1682,SVN
-Jordan,1680,JOR
+DR Congo,1674,COD
 Slovakia,1667,SVK
-DR Congo,1661,COD
 Georgia,1654,GEO
+Jordan,1653,JOR
 Israel,1647,ISR
 Romania,1639,ROU
-Bolivia,1633,BOL
-Tunisia,1628,TUN
-Iraq,1618,IRQ
+Bolivia,1621,BOL
+Bosnia and Herzegovina,1616,BIH
 Albania,1616,ALB
-Cameroon,1613,CMR
-Costa Rica,1611,CRI
-Northern Ireland,1606,NIR
-Bosnia and Herzegovina,1595,BIH
+Cameroon,1614,CMR
+Costa Rica,1608,CRI
+Cape Verde,1606,CPV
+Northern Ireland,1605,NIR
+Saudi Arabia,1598,SAU
+Iraq,1592,IRQ
 North Macedonia,1589,MKD
 Mali,1588,MLI
-Cape Verde,1578,CPV
+Tunisia,1585,TUN
+New Zealand,1578,NZL
 Honduras,1570,HND
-Saudi Arabia,1569,SAU
-Iceland,1569,ISL
-New Zealand,1562,NZL
-Haiti,1548,HTI
+Iceland,1568,ISL
+Ghana,1557,GHA
+Angola,1542,AGO
 United Arab Emirates,1540,ARE
-Angola,1537,AGO
 Finland,1536,FIN
+Haiti,1536,HTI
+Burkina Faso,1529,BFA
 Jamaica,1527,JAM
-Burkina Faso,1526,BFA
-Belarus,1525,BLR
-South Africa,1518,ZAF
-Ghana,1510,GHA
+Belarus,1522,BLR
+South Africa,1511,ZAF
 Guatemala,1504,GTM
+Oman,1480,OMN
 Syria,1479,SYR
-Oman,1479,OMN
-Palestine,1467,PSE
+Palestine,1465,PSE
 Guinea,1463,GIN
-Montenegro,1460,MNE
+Montenegro,1461,MNE
 Bulgaria,1458,BGR
-Northern Cyprus,1457,NS
 Luxembourg,1450,LUX
-Curacao,1434,CUW
-Kazakhstan,1431,KAZ
+Qatar,1447,QAT
+Northern Cyprus,1442,NS
 Suriname,1431,SUR
-China,1428,CHN
-Benin,1428,BEN
-Kurdistan,1425,KD
-Qatar,1421,QAT
+Kazakhstan,1428,KAZ
+Curacao,1427,CUW
+China,1424,CHN
+Kurdistan,1424,KD
 Libya,1420,LBY
 Gambia,1419,GMB
 Bahrain,1414,BHR
+Benin,1405,BEN
 Gabon,1401,GAB
 Uganda,1394,UGA
-Equatorial Guinea,1391,GNQ
-Trinidad and Tobago,1388,TTO
+Trinidad and Tobago,1386,TTO
+Faroe Islands,1386,FRO
 Niger,1382,NER
 Madagascar,1380,MDG
-Armenia,1378,ARM
+Equatorial Guinea,1380,GNQ
+Togo,1379,TGO
+Thailand,1376,THA
 North Korea,1375,PRK
+Comoros,1374,COM
+Armenia,1373,ARM
 Zimbabwe,1372,ZWE
-Thailand,1372,THA
+Indonesia,1372,IDN
 Zambia,1371,ZMB
-Faroe Islands,1368,FRO
 Kenya,1363,KEN
-Comoros,1363,COM
-Indonesia,1362,IDN
-Togo,1356,TGO
-Sierra Leone,1354,SLE
-Mozambique,1352,MOZ
-Estonia,1352,EST
+Estonia,1360,EST
 Vietnam,1351,VNM
 Sudan,1350,SDN
 Reunion,1345,RE
 El Salvador,1342,SLV
+Mozambique,1342,MOZ
+Sierra Leone,1341,SLE
 Guadeloupe,1338,GP
-Rwanda,1337,RWA
+Rwanda,1336,RWA
 Nicaragua,1333,NIC
-Kuwait,1331,KWT
+Kuwait,1332,KWT
 Mauritania,1329,MRT
-Azerbaijan,1321,AZE
-Zanzibar,1321,ZN
+Azerbaijan,1322,AZE
+Zanzibar,1320,ZN
 Cyprus,1314,CYP
 Tanzania,1313,TZA
 Martinique,1312,MQ
-Latvia,1305,LVA
+Liberia,1304,LBR
 Namibia,1303,NAM
+Kyrgyzstan,1295,KGZ
 Malaysia,1293,MYS
-Kyrgyzstan,1293,KGZ
 Guyana,1292,GUY
-Liberia,1291,LBR
-Ethiopia,1291,ETH
-Tajikistan,1290,TJK
 Lebanon,1288,LBN
+Latvia,1288,LVA
+Ethiopia,1287,ETH
 New Caledonia,1286,NCL
-Lithuania,1286,LTU
+Tajikistan,1285,TJK
 Burundi,1285,BDI
 Dominican Republic,1283,DOM
+Lithuania,1279,LTU
+Moldova,1270,MDA
 Botswana,1267,BWA
-Moldova,1265,MDA
 Malta,1255,MLT
 Guinea-Bissau,1248,GNB
-Central African Republic,1241,CAF
 Cuba,1239,CUB
-Malawi,1235,MWI
+Malawi,1239,MWI
+Central African Republic,1236,CAF
 French Guiana,1223,GF
 Mayotte,1216,YT
 Turkmenistan,1209,TKM
@@ -159,19 +159,19 @@ Congo,1207,COG
 Eritrea,1201,ER
 Lesotho,1198,LSO
 Yemen,1195,YEM
-Tahiti,1176,PYF
-Philippines,1169,PHL
-Eswatini,1149,SWZ
+Philippines,1179,PHL
+Tahiti,1177,PYF
+Eswatini,1148,SWZ
 Saint Vincent and the Grenadines,1141,VCT
 Papua New Guinea,1135,PNG
 Puerto Rico,1135,PRI
 Singapore,1134,SGP
-Hong Kong,1122,HKG
-India,1122,IND
+India,1128,IND
 Vanuatu,1118,VUT
 Bermuda,1117,BMU
 South Sudan,1109,SSD
 Fiji,1104,FJI
+Hong Kong,1101,HKG
 Grenada,1098,GRD
 Andorra,1080,AND
 Mauritius,1073,MUS
@@ -185,28 +185,28 @@ Gibraltar,1011,GIB
 Somaliland,1005,JS
 Saint Lucia,1003,LCA
 Western Sahara,996,EH
-Myanmar,993,MMR
-Afghanistan,990,AFG
+Myanmar,984,MMR
 Somalia,979,SOM
 Aruba,978,ABW
 Sint Maarten,975,SX
-Montserrat,971,MSR
-Greenland,946,GL
+Montserrat,972,MSR
+Afghanistan,961,AFG
+Greenland,945,GL
 Bangladesh,942,BGD
 Djibouti,940,DJI
 Dominica,934,DMA
+Pakistan,909,PAK
 Monaco,903,MC
 Barbados,898,BRB
+Antigua and Barbuda,895,ATG
 Liechtenstein,895,LIE
-Antigua and Barbuda,894,ATG
 Nepal,893,NPL
-Pakistan,880,PAK
+Cambodia,871,KHM
 Seychelles,853,SYC
-Cambodia,849,KHM
 Sri Lanka,836,LKA
-San Marino,826,SM
-Taiwan,821,TW
-Bonaire,816,BQ
+San Marino,825,SM
+Taiwan,822,TW
+Bonaire,817,BQ
 Maldives,801,MDV
 Cayman Islands,800,CYM
 Chagos Islands,782,HG
@@ -214,11 +214,11 @@ Tuvalu,756,TV
 British Virgin Islands,743,VGB
 Sint Eustatius,737,EU
 Laos,734,LAO
+East Timor,734,TL
 Samoa,728,WSM
-Mongolia,725,MNG
+Mongolia,726,MNG
 Saint Barthelemy,725,BL
-East Timor,714,TL
-Guam,705,GUM
+Guam,706,GUM
 Wallis and Futuna,699,WF
 Vatican,692,VA
 Saba,691,AB
@@ -228,13 +228,13 @@ Turks and Caicos Islands,657,TCA
 Anguilla,646,AIA
 Tibet,629,TE
 US Virgin Islands,628,VI
+Bhutan,623,BTN
 Cook Islands,622,COK
-Bhutan,622,BTN
-Brunei,592,BRN
-Macao,588,MO
+Macao,589,MO
 Christmas Island,578,CX
+Brunei,572,BRN
 Falkland Islands,571,FK
-FS Micronesia,563,FM
+FS Micronesia,564,FM
 Marshall Islands,559,MH
 Kiribati,544,KI
 Tonga,520,TON
