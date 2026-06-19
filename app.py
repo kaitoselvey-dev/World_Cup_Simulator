@@ -841,6 +841,7 @@ class Application(Frame):
         see_tournament_footer_frame.pack(side="bottom")
         Button(see_tournament_footer_frame, text="return", width=10, command=self.show_main).pack(padx=5, pady=5, side="left")
         Button(see_tournament_footer_frame, text="clear all", width=10, command=self.clear_all).pack(padx=5, pady=5, side="right")
+        Button(see_tournament_footer_frame, text="regenerate", width=10, command=self.see_tournament).pack(padx=5, pady=5, side="right")
 
             # main
         see_tournament_margin_frame = Frame(self.see_tournament_frame)
